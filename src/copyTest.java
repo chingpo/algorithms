@@ -1,14 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.concurrent.ConcurrentHashMap;
-
-class Solution {
+//for循环最慢，约为clone方法的2倍，约为System.arraycopy的4~5倍；System.arraycopy最快
+public class copyTest {
 	 private static String [] src   
 	    = {"Aaaaaaaaaa", "Vvvvvvv", "Bbbb", "Cccc", "Dddd", "Eddeee", "FFFFFFffffffff",  
 	        "Aaaaaaaaaa", "Vvvvvvv", "Bbbb", "Cccc", "Dddd", "Eddeee", "FFFFFFffffffff",  
@@ -77,5 +68,5 @@ class Solution {
 	        long end = System.currentTimeMillis();  
 	        return (end - start);  
 	    }  
-	  
-	}  
+
+}

@@ -9,24 +9,36 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.concurrent.ConcurrentHashMap;
-
-public class Solution {
-    public static  int FirstNotRepeatingChar(String str) {
-   if(str==null||str.length()==0) return -1;
-   ArrayList<Character> list=new ArrayList<Character>();
-   for(int i=0;i<str.length();i++){
-	   char ch=str.charAt(i);
-	   if(!list.contains(ch)){
-		   list.add(Character.valueOf(ch));
-	   }else{
-		   list.remove(Character.valueOf(ch));
-	   }
-   }
-   if(list.size()<=0) return -1;
-   return str.indexOf(list.get(0));
+//初始化块在构造器执行之前执行，类初始化阶段先执行最顶层父类的静态初始化块，依次向下执行，
+//最后执行当前类的静态初始化块
+//；创建对象时，先调用顶层父类的构造方法，依次向下执行，最后调用本类的构造方法。 
+class B extends Object
+{
+    static
+    {
+        System.out.println("Load B");
     }
-    public static void main(String[] args) {
-    	System.out.println(FirstNotRepeatingChar("google"));
-    	
-	}
+    public B()
+    {
+        System.out.println("Create B");
+    }
+}
+class A extends B
+{
+    static
+    {
+        System.out.println("Load A");
+    }
+    public A()
+    {
+        System.out.println("Create A");
+    }
+}
+ 
+public class Solution
+{
+    public static void main(String[] args)
+    {
+        new A();
+    }
 }

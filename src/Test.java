@@ -22,7 +22,7 @@ class Test{
 	    		   r.add(b);
 	    	   }
 	       }
-		 Collections.sort (r);
+
 		 return r;
 	    }
 	public static void main(String[] args) {

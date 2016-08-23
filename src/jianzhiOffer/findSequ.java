@@ -1,7 +1,7 @@
 package jianzhiOffer;
 import java.util.ArrayList;
 import java.util.Comparator;
-
+//连续数和为某值
 
 class findSequ{
 	 public ArrayList<ArrayList<Integer>> FindContinuousSequence(int sum) {

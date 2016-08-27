@@ -1,7 +1,8 @@
 package jianzhiOffer;
 
-import java.util.ArrayList;
+
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Scanner;
 //找出字符串中第一个只出现一次的字符
 //
@@ -25,20 +26,26 @@ import java.util.Scanner;
 public class firstOne {
 	public static  char FirstNotRepeatingChar(String str) {
 		if(str == null || str.length()==0) return '.';
-		ArrayList<Character> list = new ArrayList<Character>();
+		HashMap<Character,Integer> map=new HashMap<Character,Integer>();
         for(int i=0;i<str.length();i++){
             char ch = str.charAt(i);
-            if(!list.contains(ch)){
-                list.add(Character.valueOf(ch));
+            if(map.containsKey(ch)){
+            	int k=map.get(ch);
+            	k++;//hashmap好棒
+            	map.put(ch, k);
             }else{
-                list.remove(Character.valueOf(ch));
+            	map.put(ch, 1);
             }
         }
-        if(list.size() <=0) return '.';
-        return list.get(0);
+        for(int i=0;i<str.length();i++){
+        	char ch=str.charAt(i);
+        	if(map.get(ch)==1)
+        		return ch;
+        }
+        return '.';
+     
 		    }
 		    public static void main(String[] args) {
-		    	 System.out.println(FirstNotRepeatingChar("google") );
 		    	Scanner in = new Scanner(System.in);
 		        while (in.hasNext()) {//注意while处理多个case
 		            String a = in.next();
@@ -48,5 +55,4 @@ public class firstOne {
 		    	
 			}
 		    }
-
 }

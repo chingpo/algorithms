@@ -20,7 +20,7 @@ public class strList {
 			if(list.contains(String.valueOf(ch))) return;
 	        list.add(String.valueOf(ch));	
 		}else{
-			for(int j=i;j<ch.length;j++){
+			for(int j=0;j<ch.length;j++){
 				char temp=ch[j];
 				ch[j]=ch[i];
 				ch[i]=temp;

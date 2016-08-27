@@ -43,6 +43,7 @@ public class firstNode {
         }
         return length;
     }
+	
 }
 
 //下边的问号脸到底是   那么短的那个链表的指针pn（也就是p1或p2） 意思不是说的尾节点么？？？？？？？

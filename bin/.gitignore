@@ -2,3 +2,11 @@
 /factory/
 /builder/
 /prototype/
+/adapter/
+/proxy/
+/patternLearning/
+/pattern/
+/dynamicproxy/
+/bridge/
+/composite/
+/decorator/

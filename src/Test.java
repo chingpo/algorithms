@@ -25,10 +25,16 @@ class Test{
 
 		 return r;
 	    }
-	public static void main(String[] args) {
-		Test a=new Test();
-		int[] b={1,1,1,1,2,3,4,5};
-		int c=1;
-		System.out.println(a.FindContinuousSequence(100));
+	
+		public static void main(String args[]) {
+
+			String s1 = args[0];
+
+			String s2 = args[1];
+
+			String myStr = args[2];
+
+			System.out.println("myStr = "+ s2 + myStr);
+
+			}
 	}
-}

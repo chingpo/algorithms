@@ -31,6 +31,7 @@ public class firstOne {
             char ch = str.charAt(i);
             if(map.containsKey(ch)){
             	int k=map.get(ch);
+            	System.out.println(k);
             	k++;//hashmap好棒
             	map.put(ch, k);
             }else{

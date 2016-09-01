@@ -1,5 +1,5 @@
 package getofferPart2;
-
+//是不是子树
 public class ifSubtree {
 	public class TreeNode {
 	    int val = 0;

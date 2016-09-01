@@ -67,11 +67,11 @@ public class buildTree {
         n4.left = n8;
         n4.right = n9;
         List<Integer> result = new LinkedList<>();
-        serialize(n1, result);
+        serialize(n1, result);//前序排序[1, 2, 3, 4, 5, 6, 7, 8, 9, null, null, null, null, null, null, null, null, null, null]根左右
         System.out.println(result);
-        System.out.println();
         BinaryTreeNode root = deserialize(result, 0) ;
-        print(root);
+        System.out.println(root.val);
+        print(root);//中序排序左根右
     }
     private static void print(BinaryTreeNode root) {
         if (root != null) {

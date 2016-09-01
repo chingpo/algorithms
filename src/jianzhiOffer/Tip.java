@@ -40,6 +40,22 @@ public class Tip
 {
     public static void main(String[] args)
     {
-        new A();
+        B a=new A();
+        System.out.println("---------");
+        A b=new A();
+        System.out.println("---------");
+        B d=new B();
+
     }
+//    Load B
+//    Load A
+//    Create B
+//    Create A
+//    ---------
+//    Create B
+//    Create A
+//    ---------
+//    Create B
+    
+    
 }

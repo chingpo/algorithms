@@ -1,35 +1,34 @@
 package getofferPart2;
-
+//在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，
+//重复的结点不保留，返回链表头指针。
+//例如，链表1->2->3->3->4->4->5 处理后为 1->2->5 
 public class delDuplica {
 	static ListNode head = null;
 	public ListNode deleteDuplication(ListNode pHead)
     {
                  
-        if (pHead == null) return null;
-        ListNode p = pHead;
-        ListNode n = new ListNode(0);
-        ListNode pre = n;
-        n.next = pHead;
-        boolean flag = false;
-        while (p != null) {
-            ListNode q = p.next;
-            if (q == null) break;
-            if (q.val == p.val) {
-                while (q != null && q.val == p.val) {
-                    q = q.next;
-                }
-                pre.next = q;//删除重复
-                p = q;//移到下一位
-            } else {
-                if (!flag) {
-                    n.next = p;
-                    flag = true;
-                }
-                pre = p;
-                p = q;
-            }
-        }
-        return n.next;
+		if (pHead == null) {
+			return null;
+		}
+		ListNode preNode = null;
+		ListNode node = pHead;
+		while (node != null) {
+			if (node.next != null && node.val == node.next.val) {
+				int value = node.val;
+				while (node.next != null && node.next.val == value) {
+					node = node.next;
+				}
+				if (preNode == null) {
+					pHead = node.next;
+				} else {
+					preNode.next = node.next;
+				}
+			} else {
+				preNode = node;
+			}
+            node = node.next;
+		}
+		return pHead;
     }
 	 public void addNode(int d) {
 	        ListNode newNode = new ListNode(d);// 实例化一个节点
@@ -68,8 +67,3 @@ public class delDuplica {
 	
 }
 
-
-
-//在一个排序的链表中，存在重复的结点，请删除该链表中重复的结点，
-//重复的结点不保留，返回链表头指针。
-//例如，链表1->2->3->3->4->4->5 处理后为 1->2->5 

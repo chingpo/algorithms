@@ -29,14 +29,14 @@ public class rule {
 	            if(s>=str.length) return matchCore(str, s, pattern, p+2);  
 	            else{  
 	              
-	            if(pattern[p]==str[s]||pattern[p]=='.'){  
-	                //当前位置匹配完成，移动到下一个模式串  
-	                return matchCore(str,s+1, pattern,p+2)  
-	                        ||matchCore(str,s+1, pattern,p)  
-	                        ||matchCore(str,s, pattern,p+2);  
-	            }else  
+//	            if(pattern[p]==str[s]||pattern[p]=='.'){  
+//	                //当前位置匹配完成，移动到下一个模式串  
+//	                return matchCore(str,s+1, pattern,p+2)  
+//	                        ||matchCore(str,s+1, pattern,p)  
+//	                        ||matchCore(str,s, pattern,p+2);  
+//	            }
 	                return matchCore(str, s, pattern, p+2);  
-	            }  
+	            }
 	        }  
 	        //当前pattern的下一个不是*时候  
 	        if(s>=str.length) return false;  
@@ -53,14 +53,17 @@ public class rule {
 		char[] b={'a','b','*','a','c','*','a'};//true
 		char[] c={'a','a','.','a'};	//false
 		char[] d={'a','b','*','a'};//false
+		char[] e={'a','.','*'};//true
 		boolean ra=match(str,a);
 		boolean rb=match(str,b);
 		boolean rc=match(str,c);
 		boolean rd=match(str,d);
+		boolean re=match(str,e);
 		System.out.println(ra);
 		System.out.println(rb);
 		System.out.println(rc);
 		System.out.println(rd);
+		System.out.println(re);
 		}
 	}
 

@@ -1,5 +1,6 @@
 package jianzhiOffer;
-
+//将一个字符串转换成一个整数，要求不能使用字符串转
+//换整数的库函数。 数值为0或者字符串不是一个合法的数值则返回0 
 public class strtoInt {
 	   public static int StrToInt(String str) {
 		   if (str.equals("") || str.length() == 0)

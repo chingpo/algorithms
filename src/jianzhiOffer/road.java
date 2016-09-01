@@ -39,7 +39,7 @@ public class road {
 	        System.out.println(a.hasPath(matrix, 3, 4, "bcced".toCharArray()));  
 	        System.out.println(a.hasPath(matrix, 3, 4, "abcd".toCharArray()));  
 	        System.out.println(a.hasPath(matrix, 3, 4, "see".toCharArray()));  
-	        System.out.println(a.hasPath(matrix, 3, 4, "abcb".toCharArray()));  
+
 	          
 	    }  
 

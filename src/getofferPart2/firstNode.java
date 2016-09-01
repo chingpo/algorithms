@@ -1,5 +1,5 @@
 package getofferPart2;
-
+//找出第一个相等的节点
 public class firstNode {
 	
 	public class ListNode {

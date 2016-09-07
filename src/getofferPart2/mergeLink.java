@@ -7,7 +7,7 @@ public class mergeLink {
 	            if (list1 == null) {  
 	                return list2;  
 	            }  
-	            if (list2 == null) {  
+	            if (list2 == null) {   
 	                return list1;  
 	            }  
 	            if (list1.val < list2.val) {  

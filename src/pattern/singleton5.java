@@ -4,24 +4,19 @@ package pattern;
  * 
  * */
 public class  singleton5 {
-	private static singleton5 instance=null;
+	private volatile static singleton5 instance=null;
 	public static singleton5 getInstance(){
 		if(instance==null){
 			singleton5 sc;
 			synchronized(singleton5.class){
 				sc=instance;
-				if(sc==null){
-					synchronized(singleton5.class){
-					if(sc==null){
-						sc=new singleton5();
-					}
+				if(sc==null){				
+						sc=new singleton5();				
 				}
 				instance=sc;
 			}
 		}
-	}
-		return instance;
-						
+		return instance;					
 	}
 	private singleton5(){}
 }
